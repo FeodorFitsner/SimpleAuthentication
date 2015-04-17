@@ -5,5 +5,5 @@ before_build:
 - nuget restore
 
 test_script:
-- ps: [Environment]::SetEnvironmentVariable("APPVEYOR_API_URL", $null)
+- ps: '[Environment]::SetEnvironmentVariable("APPVEYOR_API_URL", $null)'
 - '%xunit20%\xunit.console.x86 "C:\projects\simpleauthentication\Code\SimpleAuthentication.Tests\bin\Debug\SimpleAuthentication.Tests.dll"'
