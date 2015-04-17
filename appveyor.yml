@@ -1,2 +1,9 @@
+cache:
+- packages -> **\packages.config
+  
 before_build:
-  - nuget restore
+- nuget restore
+
+test_script:
+- set appveyor_api_url=
+- '%xunit20%\xunit.console.x86 "C:\projects\simpleauthentication\Code\SimpleAuthentication.Tests\bin\Debug\SimpleAuthentication.Tests.dll"'
